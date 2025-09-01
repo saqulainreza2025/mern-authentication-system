@@ -10,7 +10,8 @@ const authMiddleWare = asyncHandler(async (req, res, next) => {
       req.cookies?.refreshToken ||
       req.header("Authorization")?.replace("Bearer ", "");
 
-    if (!token) {g
+    if (!token) {
+      g;
       throw new ApiErrorResponse(
         401,
         "Unauthorized request - no token provided"
